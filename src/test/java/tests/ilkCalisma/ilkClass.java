@@ -14,5 +14,7 @@ public class ilkClass {
 
     Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
 
+    Driver.closeDriver();
+
 }
 }
