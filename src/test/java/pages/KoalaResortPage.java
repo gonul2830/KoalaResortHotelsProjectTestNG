@@ -31,4 +31,41 @@ public class KoalaResortPage {
     @FindBy(xpath = "//*[.='Try again please']")
     public WebElement girisYapilamadiElementi;
 
+
+    @FindBy (xpath = "//*[text()='Hotel Management']")
+    public WebElement hotelManagement;
+
+    @FindBy (partialLinkText = "Hotel List")
+    public WebElement hotelList;
+
+    @FindBy (xpath = "//*[text()='Add Hotel ']")
+    public WebElement addHotel;
+
+    @FindBy(xpath = "//input[@id='Code']")
+    public WebElement codeTextBox;
+
+    @FindBy(xpath = "//input[@id='Name']")
+    public WebElement nameTextBox;
+
+    @FindBy(xpath = "//input[@id='Address']")
+    public WebElement adressTextBox;
+
+    @FindBy(xpath = "//input[@id='Phone']")
+    public WebElement phoneTextBox;
+
+    @FindBy(xpath = "//input[@id='Email']")
+    public WebElement emailTextBox;
+
+    @FindBy(id = "IDGroup")
+    public WebElement acilirMenu;
+
+    @FindBy(id = "btnSubmit")
+    public WebElement saveButonu;
+
+    @FindBy(xpath = "//div[text()='Hotel was inserted successfully']")
+    public WebElement sonucYazisiElementi;
+
+    @FindBy(xpath = "//*[text()='OK']")
+    public WebElement sonOKButonu;
+
 }
