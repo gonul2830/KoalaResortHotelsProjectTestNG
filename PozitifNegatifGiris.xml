@@ -2,8 +2,11 @@
 <suite name="istenen Classlar">
     <test name="class calistirma">
         <classes>
-            <class name="smokeTest.uS_001.PozitifGiris"></class>
-            <class name="smokeTest.uS_002.NegatifGiris"></class>
+
+            <class name="smokeTest.PozitifGiris"></class>
+            <class name="smokeTest.NegatifGiris"></class>
+            <class name="tests.uS_001.PozitifGiris"></class>
+            <class name="tests.uS_002.NegatifGiris"></class>
 
         </classes>
     </test>
