@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="istenen Classlar">
+    <test name="class calistirma">
+        <classes>
+
+            <class name="smokeTest.PozitifGiris"></class>
+            <class name="smokeTest.NegatifGiris"></class>
+            <class name="tests.uS_001.PozitifGiris"></class>
+            <class name="tests.uS_002.NegatifGiris"></class>
+
+        </classes>
+    </test>
+</suite>
