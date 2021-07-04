@@ -1,4 +1,4 @@
-package tests.US_003.US_006;
+package tests.US_006;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -8,8 +8,6 @@ import pages.KoalaResortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
-
-import java.security.Key;
 
 public class OtelOdasiOlusturma extends TestBaseRapor{
 
@@ -38,25 +36,25 @@ public class OtelOdasiOlusturma extends TestBaseRapor{
         extentTest.info("Add hotelRoom butonuna basıldı");
 
         Select select=new Select(koalaResortPage.idHotelDropDown);
-        select.selectByVisibleText("Florencio Huels");
+        select.selectByVisibleText(ConfigReader.getProperty("kr_hotel_name"));
         extentTest.info("Hotel ID'si seçildi");
 
         Actions actions=new Actions(Driver.getDriver());
         actions.contextClick(koalaResortPage.codeTextBox)
-                .sendKeys("23000").sendKeys(Keys.TAB)
-                .sendKeys("Alperen").sendKeys(Keys.TAB)
-                .sendKeys("Elazığ").perform();
+                .sendKeys(ConfigReader.getProperty("kr_code01")).sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("kr_name")).sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("kr_location")).perform();
         extentTest.info("Code,name,location bilgileri girildi");
         actions.contextClick(koalaResortPage.descriptionsTextBox).pause(5)
-                .sendKeys("Merhaba Team-3 Projecileri").sendKeys(Keys.TAB)
-                .sendKeys("6500").perform();
+                .sendKeys(ConfigReader.getProperty("kr_description")).sendKeys(Keys.TAB)
+                .sendKeys(ConfigReader.getProperty("kr_price")).perform();
         extentTest.info("Description ve price bilgileri girildi");
         Select select1=new Select(koalaResortPage.roomTypeDropdown);
-        select1.selectByVisibleText("Queen");
+        select1.selectByVisibleText(ConfigReader.getProperty("kr_roomType"));
         extentTest.info("Room Type seçildi");
 
-        actions.contextClick(koalaResortPage.maxAdult).sendKeys("2")
-                .sendKeys(Keys.TAB).sendKeys("2").sendKeys(Keys.TAB).
+        actions.contextClick(koalaResortPage.maxAdult).sendKeys(ConfigReader.getProperty("kr_maxAdult"))
+                .sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("kr_maxChild")).sendKeys(Keys.TAB).
                 sendKeys(Keys.ENTER).sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
         extentTest.info("Max adult ve max children count değerleri girildi");
         extentTest.info("Approved seçeneği işaretlendi ve SAVE butonuna basıldı");
