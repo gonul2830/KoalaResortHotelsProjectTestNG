@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class KoalaResortPage {
 
     public KoalaResortPage(){
@@ -82,6 +84,24 @@ public class KoalaResortPage {
 
     @FindBy(id = "MaxAdultCount")
     public WebElement maxAdult;
+
+    @FindBy(xpath = "//input[@name='Phone']")
+    public WebElement phoneTextTable;
+
+    @FindBy(xpath  ="//*[text()='Search']")
+    public WebElement hotelListSearchBtn;
+
+    @FindBy(xpath = "//tbody//tr//td[3]")
+    public WebElement nameHotelKontrol;
+
+    @FindBy(xpath = "//input[@name='Email']")
+    public WebElement emailTextTable;
+
+    @FindBy(xpath = "//input[@name='Name']")
+    public WebElement nameTextTable;
+
+    @FindBy(xpath = "//input[@name='Code']")
+    public WebElement codeTextTable;
 
 
 
