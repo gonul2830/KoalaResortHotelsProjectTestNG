@@ -10,6 +10,6 @@ public class ilkClass {
     public void test01(){
     Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
 
-   String= "Zeki Deneme";
-}
+
+ }
 }
