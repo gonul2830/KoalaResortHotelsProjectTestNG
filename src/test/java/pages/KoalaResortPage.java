@@ -66,7 +66,7 @@ public class KoalaResortPage {
 
     @FindBy(xpath = "//*[text()='OK']")
     public WebElement sonOKButonu;
-//
+    //
     @FindBy(partialLinkText = "Hotel Rooms")
     public WebElement hotelRoomsBtn;
 
@@ -102,6 +102,23 @@ public class KoalaResortPage {
 
     @FindBy(xpath = "//input[@name='Code']")
     public WebElement codeTextTable;
+
+    @FindBy(xpath = "(//label[text()='Code'])[2]")
+    public WebElement codeHataMesaji;
+
+    @FindBy(xpath = "(//label[text()='Name'])[2]")
+    public WebElement nameHataMesaji;
+
+    @FindBy(xpath = "(//label[text()='Address'])[2]")
+    public WebElement addressHataMesaji;
+
+    @FindBy(xpath = "(//label[text()='Email'])[2]")
+    public WebElement gmailHataMesaji;
+
+    @FindBy(xpath = "//label[text()='Select Group']")
+    public WebElement selectGroupHataMesaji;
+
+
 
 
 
