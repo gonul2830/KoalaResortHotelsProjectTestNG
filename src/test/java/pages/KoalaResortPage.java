@@ -91,6 +91,9 @@ public class KoalaResortPage {
     @FindBy(xpath = "(//label[text()='Name'])[2]")
     public WebElement nameHataMesaji;
 
+    @FindBy(xpath = "(//label[text()='Address'])[2]")
+    public WebElement addressHataMesaji;
+
     @FindBy(xpath = "(//label[text()='Email'])[2]")
     public WebElement gmailHataMesaji;
 

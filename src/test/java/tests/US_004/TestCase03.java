@@ -23,24 +23,24 @@ public class TestCase03 extends TestBaseRapor {
         koalaResortPage.kullaniciAdi.sendKeys(ConfigReader.getProperty("kr_valid_username"));
         koalaResortPage.passwordTextBox.sendKeys(ConfigReader.getProperty("kr_valid_password"));
         koalaResortPage.loginButonu.click();
-        koalaResortPage.hotelManagementButton.click();
-        koalaResortPage.hotelListButton.click();
-        koalaResortPage.addHotelButton.click();
+        koalaResortPage.hotelManagement.click();
+        koalaResortPage.hotelList.click();
+        koalaResortPage.addHotel.click();
 
         Actions actions = new Actions(Driver.getDriver());
         actions.click(koalaResortPage.codeTextBox).
                 sendKeys(ConfigReader.getProperty("kr_code")).
                 sendKeys(Keys.TAB).
-                sendKeys(ConfigReader.getProperty("kr_hotelname")).
+                sendKeys(ConfigReader.getProperty("kr_customer_name")).
                 sendKeys(Keys.TAB).
-                sendKeys(ConfigReader.getProperty("kr_address")).
+                sendKeys(ConfigReader.getProperty("kr_customer_adress")).
                 sendKeys(Keys.TAB).
-                sendKeys(ConfigReader.getProperty("kr_phone")).perform();
+                sendKeys(ConfigReader.getProperty("kr_customer_phone")).perform();
 
-        Select select = new Select(koalaResortPage.acilirListe);
+        Select select = new Select(koalaResortPage.acilirMenu);
         select.selectByIndex(1);
 
-        koalaResortPage.saveButton.click();
+        koalaResortPage.saveButonu.click();
 
         Assert.assertTrue(koalaResortPage.gmailHataMesaji.isDisplayed());
 
