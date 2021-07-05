@@ -8,8 +8,9 @@ import pages.KoalaResortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBase;
+import utilities.TestBaseRapor;
 
-public class TestCase05 extends TestBase {
+public class TestCase05 extends TestBaseRapor {
 
     @Test
     public void test01() {

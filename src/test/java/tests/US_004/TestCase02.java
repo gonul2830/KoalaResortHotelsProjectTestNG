@@ -9,10 +9,11 @@ import pages.KoalaResortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBase;
+import utilities.TestBaseRapor;
 
 import java.security.Key;
 
-public class TestCase02 extends TestBase {
+public class TestCase02 extends TestBaseRapor {
 
     @Test
     public void test01() {
