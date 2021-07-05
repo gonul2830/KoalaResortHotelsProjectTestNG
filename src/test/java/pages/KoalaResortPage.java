@@ -31,35 +31,17 @@ public class KoalaResortPage {
     @FindBy(xpath = "//*[.='Try again please']")
     public WebElement girisYapilamadiElementi;
 
-    @FindBy(xpath = "//span[text()='Hotel Management']")
-    public WebElement hotelManagementButton;
-
-    @FindBy(xpath = "(//i[@class='icon-calendar'])[2]")
-    public WebElement hotelListButton;
-
-    @FindBy(xpath = "//span[text()='Add Hotel ']")
-    public WebElement addHotelButton;
-
     @FindBy(xpath = "//input[@id='Code']")
     public WebElement codeTextBox;
 
     @FindBy(xpath = "//input[@id='Name']")
     public WebElement nameTextBox;
 
-    @FindBy(xpath = "(//label[text()='Address'])[2]")
-    public WebElement addressHataMesaji;
-
     @FindBy(xpath = "//input[@id='Phone']")
     public WebElement phoneTextBox;
 
     @FindBy(xpath = "//input[@id='Email']")
     public WebElement emailTextBox;
-
-    @FindBy(xpath = "//select[@id='IDGroup']")
-    public WebElement acilirListe;
-
-    @FindBy(xpath = "//button[@id='btnSubmit']")
-    public WebElement saveButton;
 
     @FindBy(xpath = "//div[text()='Hotel was inserted successfully']")
     public WebElement sonucYazisiElementi;
