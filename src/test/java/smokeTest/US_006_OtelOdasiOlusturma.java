@@ -1,4 +1,4 @@
-package tests.US_006;
+package smokeTest;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -9,7 +9,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
-public class OtelOdasiOlusturma extends TestBaseRapor{
+public class US_006_OtelOdasiOlusturma extends TestBaseRapor{
 
     KoalaResortPage koalaResortPage=new KoalaResortPage();
 

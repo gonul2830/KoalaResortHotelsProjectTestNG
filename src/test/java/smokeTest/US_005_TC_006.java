@@ -1,4 +1,4 @@
-package tests.US_005;
+package smokeTest;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -6,7 +6,7 @@ import pages.KoalaResortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class TC_006 {
+public class US_005_TC_006 {
 
     KoalaResortPage koalaResortPage=new KoalaResortPage();
 
