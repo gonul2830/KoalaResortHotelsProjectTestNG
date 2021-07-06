@@ -6,13 +6,11 @@ import pages.KoalaResortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class TC_005 {
-
-    KoalaResortPage koalaResortPage=new KoalaResortPage();
+public class TC_003 {
+    KoalaResortPage koalaResortPage = new KoalaResortPage();
 
     @Test
-    public void phoneAramaKutusu() throws InterruptedException {
-
+    public void nameAramaKutusu() throws InterruptedException{
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
         koalaResortPage.ilkLoginLink.click();
 
@@ -25,11 +23,13 @@ public class TC_005 {
 
         koalaResortPage.hotelList.click();
 
-        koalaResortPage.phoneTextTable.sendKeys(ConfigReader.getProperty("kr_phoneText"));
-
+        koalaResortPage.nameTextTable.sendKeys(ConfigReader.getProperty("kr_customer_name"));
         koalaResortPage.hotelListSearchBtn.click();
-
         Thread.sleep(5000);
+
         Assert.assertEquals(koalaResortPage.nameHotelKontrol.getText(),ConfigReader.getProperty("kr_customer_name"));
+
+
     }
+
 }

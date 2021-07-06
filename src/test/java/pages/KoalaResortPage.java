@@ -103,6 +103,13 @@ public class KoalaResortPage {
     @FindBy(xpath = "//input[@name='Code']")
     public WebElement codeTextTable;
 
+    @FindBy(xpath = "//input[@name='IDHotel']")
+    public WebElement IDHotelTextTable;
+
+    @FindBy(xpath = "//input[@name='Address']")
+    public WebElement adresTextTable;
+
+
 
 
 
