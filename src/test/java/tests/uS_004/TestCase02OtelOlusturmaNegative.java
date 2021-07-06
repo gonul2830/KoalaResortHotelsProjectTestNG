@@ -1,16 +1,16 @@
-package tests.US_004;
+package tests.uS_004;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.KoalaResortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.TestBase;
 import utilities.TestBaseRapor;
 
-public class TestCase05 extends TestBaseRapor {
+public class TestCase02OtelOlusturmaNegative extends TestBaseRapor {
 
     @Test
     public void test01() {
@@ -30,7 +30,6 @@ public class TestCase05 extends TestBaseRapor {
         actions.click(koalaResortPage.codeTextBox).
                 sendKeys(ConfigReader.getProperty("kr_code")).
                 sendKeys(Keys.TAB).
-                sendKeys(ConfigReader.getProperty("kr_customer_name")).
                 sendKeys(Keys.TAB).
                 sendKeys(ConfigReader.getProperty("kr_customer_adress")).
                 sendKeys(Keys.TAB).
@@ -38,9 +37,13 @@ public class TestCase05 extends TestBaseRapor {
                 sendKeys(Keys.TAB).
                 sendKeys(ConfigReader.getProperty("kr_customer_email")).perform();
 
+        Select select = new Select(koalaResortPage.acilirMenu);
+        select.selectByIndex(1);
+
         koalaResortPage.saveButonu.click();
 
-        Assert.assertTrue(koalaResortPage.selectGroupHataMesaji.isDisplayed());
+        Assert.assertTrue(koalaResortPage.nameHataMesaji.isDisplayed());
+
 
 
 
