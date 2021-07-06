@@ -118,6 +118,14 @@ public class KoalaResortPage {
     @FindBy(xpath = "//label[text()='Select Group']")
     public WebElement selectGroupHataMesaji;
 
+    @FindBy(xpath = "//input[@id='IsAvailable']")
+    public WebElement roomAddApprovedCheckbox;
+
+    @FindBy(xpath = "//button[@id='btnSubmit']")
+    public WebElement roomAddSaveButton;
+
+    @FindBy(css = ".bootbox-body")
+    public WebElement roomAddBasariliYazisi;
 
 
 
