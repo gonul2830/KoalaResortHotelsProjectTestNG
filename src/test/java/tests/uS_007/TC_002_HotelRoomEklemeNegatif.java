@@ -12,10 +12,11 @@ import utilities.TestBaseRapor;
 
 public class TC_002_HotelRoomEklemeNegatif extends TestBaseRapor {
 
-    KoalaResortPage koalaResortPage=new KoalaResortPage();
 
     @Test
     public void hotelRoomAddNegativPriceTextBox(){
+
+        KoalaResortPage koalaResortPage=new KoalaResortPage();
 
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
 
