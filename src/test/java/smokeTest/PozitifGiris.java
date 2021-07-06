@@ -21,33 +21,23 @@ public class PozitifGiris extends TestBaseRapor {
     sayfayi kapatir
 
      */
-    KoalaResortPage koalaResortPage= new KoalaResortPage();
-    @Test
-    public void positifGirisTest(){
 
-        extentTest=extentReports.createTest("us_001","Gecerli bilgilerle giris yapma");
+    @Test
+    public void positifGirisTest() throws InterruptedException{
+
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
-        extentTest.pass("Koala resort hotels sayfasina gidildi");
+
+        KoalaResortPage koalaResortPage= new KoalaResortPage();
 
         koalaResortPage.ilkLoginLink.click();
-        extentTest.pass("Login linkine basildi");
-
         koalaResortPage.kullaniciAdi.sendKeys(ConfigReader.getProperty("kr_valid_username"));
-        extentTest.pass("Gecerli kullanici adi yazildi");
-
         koalaResortPage.passwordTextBox.sendKeys(ConfigReader.getProperty("kr_valid_password"));
-        extentTest.pass("Gecerli sifre yazildi");
-
-
         koalaResortPage.loginButonu.click();
-        extentTest.pass("Login butonuna basildi");
-
 
         Assert.assertEquals(Driver.getDriver().getCurrentUrl(),ConfigReader.getProperty("kr_basarili_giris_url"));
-        extentTest.pass("Basarili giris yapildigi test edildi");
-
         Driver.closeDriver();
-        extentTest.pass("sayfa basarili bir sekilde kapatıldı");
+
+
 
     }
 
