@@ -127,6 +127,7 @@ public class KoalaResortPage {
     @FindBy(css = ".bootbox-body")
     public WebElement roomAddBasariliYazisi;
 
+
     @FindBy(partialLinkText = "Hotel Rooms")
     public WebElement hotelRoomsWebElement;
 
@@ -168,6 +169,7 @@ public class KoalaResortPage {
         passwordTextBox.sendKeys(ConfigReader.getProperty("kr_valid_password"));
         loginButonu.click();
     }
+
 
 
 
