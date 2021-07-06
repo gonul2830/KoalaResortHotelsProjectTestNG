@@ -1,17 +1,17 @@
-package tests.US_005;
+package tests.uS_005;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.KoalaResortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class TC_005 {
-
-    KoalaResortPage koalaResortPage=new KoalaResortPage();
+public class TC_002 extends TestBaseRapor {
+    KoalaResortPage koalaResortPage = new KoalaResortPage();
 
     @Test
-    public void phoneAramaKutusu() throws InterruptedException {
+    public void codeAramaKutusu() throws InterruptedException{
 
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
         koalaResortPage.ilkLoginLink.click();
@@ -25,11 +25,12 @@ public class TC_005 {
 
         koalaResortPage.hotelList.click();
 
-        koalaResortPage.phoneTextTable.sendKeys(ConfigReader.getProperty("kr_phoneText"));
-
+        koalaResortPage.codeTextTable.sendKeys(ConfigReader.getProperty("kr_CodeText"));
         koalaResortPage.hotelListSearchBtn.click();
 
         Thread.sleep(5000);
         Assert.assertEquals(koalaResortPage.nameHotelKontrol.getText(),ConfigReader.getProperty("kr_customer_name"));
+
+
     }
 }

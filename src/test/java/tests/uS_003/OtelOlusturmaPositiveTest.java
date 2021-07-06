@@ -1,4 +1,4 @@
-package tests.US_003;
+package tests.uS_003;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
