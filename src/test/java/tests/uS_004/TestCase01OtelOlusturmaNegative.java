@@ -1,4 +1,4 @@
-package tests.US_004;
+package tests.uS_004;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -8,12 +8,9 @@ import org.testng.annotations.Test;
 import pages.KoalaResortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.TestBase;
 import utilities.TestBaseRapor;
 
-import javax.swing.*;
-
-public class TestCase01 extends TestBaseRapor {
+public class TestCase01OtelOlusturmaNegative extends TestBaseRapor {
 
     @Test
     public void test01() {

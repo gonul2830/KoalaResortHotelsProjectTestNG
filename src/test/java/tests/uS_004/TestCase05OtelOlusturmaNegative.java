@@ -1,17 +1,15 @@
-package tests.US_004;
+package tests.uS_004;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.KoalaResortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.TestBase;
 import utilities.TestBaseRapor;
 
-public class TestCase03 extends TestBaseRapor {
+public class TestCase05OtelOlusturmaNegative extends TestBaseRapor {
 
     @Test
     public void test01() {
@@ -35,14 +33,17 @@ public class TestCase03 extends TestBaseRapor {
                 sendKeys(Keys.TAB).
                 sendKeys(ConfigReader.getProperty("kr_customer_adress")).
                 sendKeys(Keys.TAB).
-                sendKeys(ConfigReader.getProperty("kr_customer_phone")).perform();
-
-        Select select = new Select(koalaResortPage.acilirMenu);
-        select.selectByIndex(1);
+                sendKeys(ConfigReader.getProperty("kr_customer_phone")).
+                sendKeys(Keys.TAB).
+                sendKeys(ConfigReader.getProperty("kr_customer_email")).perform();
 
         koalaResortPage.saveButonu.click();
 
-        Assert.assertTrue(koalaResortPage.gmailHataMesaji.isDisplayed());
+        Assert.assertTrue(koalaResortPage.selectGroupHataMesaji.isDisplayed());
+
+
 
     }
+
+
 }
