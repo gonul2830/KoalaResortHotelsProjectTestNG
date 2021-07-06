@@ -18,6 +18,8 @@ public class OtelOdasiOlusturma extends TestBaseRapor{
         extentTest=extentReports.createTest("US_006","Otel odasi olusturma");
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
         extentTest.info("Koala Resort Hotel sayfasina giris yapildi");
+
+
         koalaResortPage.ilkLoginLink.click();
         extentTest.info("Login linkine basıldı");
 

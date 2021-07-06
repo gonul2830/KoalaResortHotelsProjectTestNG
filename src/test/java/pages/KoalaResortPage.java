@@ -1,5 +1,5 @@
 package pages;
-
+import utilities.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -117,6 +117,62 @@ public class KoalaResortPage {
 
     @FindBy(xpath = "//label[text()='Select Group']")
     public WebElement selectGroupHataMesaji;
+
+    @FindBy(xpath = "//input[@id='IsAvailable']")
+    public WebElement roomAddApprovedCheckbox;
+
+    @FindBy(xpath = "//button[@id='btnSubmit']")
+    public WebElement roomAddSaveButton;
+
+    @FindBy(css = ".bootbox-body")
+    public WebElement roomAddBasariliYazisi;
+
+    @FindBy(partialLinkText = "Hotel Rooms")
+    public WebElement hotelRoomsWebElement;
+
+    @FindBy(id="lkpHotels")
+    public WebElement hotelRoomsSelectHotelDropDownWebElement;
+
+    @FindBy(xpath ="//button[text()='Search']")
+    public WebElement hotelRoomsSearchButonWebElement;
+
+    @FindBy(xpath = "//td[text()='SMIRNY HOTEL']")
+    public WebElement hotelAramaSmirnySonucWebElement;
+
+    @FindBy(xpath = "//input[@name='Code']")
+    public WebElement hotelRoomsAramaCodeTextBoxWebElement;
+
+    @FindBy(xpath = "//input[@name='Name']")
+    public WebElement hotelRoomsAramaNameTextBoxWebElement;
+
+    @FindBy(xpath = "//input[@name='Location']")
+    public WebElement hotelRoomsAramaLocationTextBoxWebElement;
+
+    @FindBy(xpath = "//input[@name='Price']")
+    public WebElement hotelRoomsAramaPriceTextBoxWebElement;
+
+    @FindBy(id="lkpGroupRoomTypes")
+    public WebElement hotelRoomsAramaTypeWebElement;
+
+    @FindBy(xpath = "(//select[@name='datatable_ajax_length'])[1]")
+    public WebElement hotelRoomsAramaViewDropDownMenu;
+
+    @FindBy(xpath = "//select[@name='IsAvailable']")
+    public WebElement hotelRoomsAramaIsAvailableDropdown;
+
+
+    public void koalaResortLogin(){
+        Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
+        ilkLoginLink.click();
+        kullaniciAdi.sendKeys(ConfigReader.getProperty("kr_valid_username"));
+        passwordTextBox.sendKeys(ConfigReader.getProperty("kr_valid_password"));
+        loginButonu.click();
+    }
+
+
+
+
+
 
 
 

@@ -26,9 +26,9 @@ public class TestBaseRapor {
         // İstediğiniz bilgileri buraya ekeyebiliyorsunuz.
         extentReports.setSystemInfo("Enviroment","QA");
         extentReports.setSystemInfo("Browser", ConfigReader.getProperty("browser")); // chrome, firefox
-        extentReports.setSystemInfo("Automation Engineer", "Mehmet");
-        extentHtmlReporter.config().setDocumentTitle("amazon Arama Testi");
-        extentHtmlReporter.config().setReportName("amazon Arama Automation Reports");
+        extentReports.setSystemInfo("Automation Engineer", "Team3");
+        extentHtmlReporter.config().setDocumentTitle("Koalaresorthotels Testi");
+        extentHtmlReporter.config().setReportName("Koalaresorthotels Automation Reports");
     }
     // Her test methodundan sonra eğer testte hata varsa, ekran görüntüsü alıp rapora ekliyor
     @AfterMethod(alwaysRun = true)
