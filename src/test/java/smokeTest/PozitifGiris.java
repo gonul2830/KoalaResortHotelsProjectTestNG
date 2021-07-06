@@ -1,12 +1,15 @@
 package smokeTest;
 
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.KoalaResortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class PozitifGiris {
+public class PozitifGiris extends TestBaseRapor {
     /*
     Kullanıcı http://qa-environment.koalaresorthotels.com sayfasına gider
     Kullanıcı sağ üstteki "Log in" butonuna tıklar
@@ -18,21 +21,35 @@ public class PozitifGiris {
     sayfayi kapatir
 
      */
-
+    KoalaResortPage koalaResortPage= new KoalaResortPage();
     @Test
     public void positifGirisTest(){
 
+        extentTest=extentReports.createTest("us_001","Gecerli bilgilerle giris yapma");
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
-
-        KoalaResortPage koalaResortPage= new KoalaResortPage();
+        extentTest.pass("Koala resort hotels sayfasina gidildi");
 
         koalaResortPage.ilkLoginLink.click();
+        extentTest.pass("Login linkine basildi");
+
         koalaResortPage.kullaniciAdi.sendKeys(ConfigReader.getProperty("kr_valid_username"));
+        extentTest.pass("Gecerli kullanici adi yazildi");
+
         koalaResortPage.passwordTextBox.sendKeys(ConfigReader.getProperty("kr_valid_password"));
+        extentTest.pass("Gecerli sifre yazildi");
+
+
         koalaResortPage.loginButonu.click();
+        extentTest.pass("Login butonuna basildi");
+
 
         Assert.assertEquals(Driver.getDriver().getCurrentUrl(),ConfigReader.getProperty("kr_basarili_giris_url"));
+        extentTest.pass("Basarili giris yapildigi test edildi");
+
         Driver.closeDriver();
+        extentTest.pass("sayfa basarili bir sekilde kapatıldı");
 
     }
+
+
 }
