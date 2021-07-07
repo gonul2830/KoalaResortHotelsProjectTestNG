@@ -12,7 +12,7 @@ public class KoalaResortPage {
 
     public KoalaResortPage(){
 
-            PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(),this);
 
     }
 
@@ -169,17 +169,3 @@ public class KoalaResortPage {
         passwordTextBox.sendKeys(ConfigReader.getProperty("kr_valid_password"));
         loginButonu.click();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
