@@ -127,7 +127,6 @@ public class KoalaResortPage {
     @FindBy(css = ".bootbox-body")
     public WebElement roomAddBasariliYazisi;
 
-
     @FindBy(partialLinkText = "Hotel Rooms")
     public WebElement hotelRoomsWebElement;
 

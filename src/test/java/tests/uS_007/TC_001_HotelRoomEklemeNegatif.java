@@ -28,6 +28,8 @@ public class TC_001_HotelRoomEklemeNegatif extends TestBaseRapor {
         koalaResortPage.hotelRoomsBtn.click();
         koalaResortPage.addHotelsRoom.click();
 
+    KoalaResortPage koalaResortPage=new KoalaResortPage();
+
 
         Actions actions=new Actions(Driver.getDriver());
         actions.contextClick(koalaResortPage.codeTextBox).
@@ -60,5 +62,4 @@ public class TC_001_HotelRoomEklemeNegatif extends TestBaseRapor {
 
 
     }
-
 }

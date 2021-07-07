@@ -60,5 +60,6 @@ public class TC_002_HotelRoomEklemeNegatif extends TestBaseRapor {
 
         Assert.assertTrue(koalaResortPage.roomAddSaveButton.isEnabled());
 
+
     }
 }
