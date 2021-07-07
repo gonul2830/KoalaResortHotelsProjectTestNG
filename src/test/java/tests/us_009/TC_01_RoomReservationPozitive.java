@@ -78,7 +78,5 @@ public class TC_01_RoomReservationPozitive {
        koalaResortPage.saveButonu.click();
 
 
-
-
     }
 }

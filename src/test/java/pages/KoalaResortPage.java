@@ -10,34 +10,34 @@ import java.util.List;
 
 public class KoalaResortPage {
 
-    public KoalaResortPage(){
+    public KoalaResortPage() {
 
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
 
     }
 
     @FindBy(linkText = "Log in")
     public WebElement ilkLoginLink;
 
-    @FindBy (id="UserName")
-    public  WebElement kullaniciAdi;
+    @FindBy(id = "UserName")
+    public WebElement kullaniciAdi;
 
-    @FindBy(id="Password")
+    @FindBy(id = "Password")
     public WebElement passwordTextBox;
 
-    @FindBy(id="btnSubmit")
+    @FindBy(id = "btnSubmit")
     public WebElement loginButonu;
 
     @FindBy(xpath = "//*[.='Try again please']")
     public WebElement girisYapilamadiElementi;
 
-    @FindBy (xpath = "//*[text()='Hotel Management']")
+    @FindBy(xpath = "//*[text()='Hotel Management']")
     public WebElement hotelManagement;
 
-    @FindBy (partialLinkText = "Hotel List")
+    @FindBy(partialLinkText = "Hotel List")
     public WebElement hotelList;
 
-    @FindBy (xpath = "//*[text()='Add Hotel ']")
+    @FindBy(xpath = "//*[text()='Add Hotel ']")
     public WebElement addHotel;
 
     @FindBy(xpath = "//input[@id='Code']")
@@ -88,7 +88,7 @@ public class KoalaResortPage {
     @FindBy(xpath = "//input[@name='Phone']")
     public WebElement phoneTextTable;
 
-    @FindBy(xpath  ="//*[text()='Search']")
+    @FindBy(xpath = "//*[text()='Search']")
     public WebElement hotelListSearchBtn;
 
     @FindBy(xpath = "//tbody//tr//td[3]")
@@ -131,10 +131,10 @@ public class KoalaResortPage {
     @FindBy(partialLinkText = "Hotel Rooms")
     public WebElement hotelRoomsWebElement;
 
-    @FindBy(id="lkpHotels")
+    @FindBy(id = "lkpHotels")
     public WebElement hotelRoomsSelectHotelDropDownWebElement;
 
-    @FindBy(xpath ="//button[text()='Search']")
+    @FindBy(xpath = "//button[text()='Search']")
     public WebElement hotelRoomsSearchButonWebElement;
 
     @FindBy(xpath = "//td[text()='SMIRNY HOTEL']")
@@ -152,7 +152,7 @@ public class KoalaResortPage {
     @FindBy(xpath = "//input[@name='Price']")
     public WebElement hotelRoomsAramaPriceTextBoxWebElement;
 
-    @FindBy(id="lkpGroupRoomTypes")
+    @FindBy(id = "lkpGroupRoomTypes")
     public WebElement hotelRoomsAramaTypeWebElement;
 
     @FindBy(xpath = "(//select[@name='datatable_ajax_length'])[1]")
@@ -162,10 +162,52 @@ public class KoalaResortPage {
     public WebElement hotelRoomsAramaIsAvailableDropdown;
 
 
-    public void koalaResortLogin(){
+    @FindBy(xpath = "//a[@href='/admin/RoomReservationAdmin']")
+    public WebElement roomReservations;
+
+    @FindBy(xpath = "//span[@class='hidden-480']")
+    public WebElement addRoomReservation;
+
+    @FindBy(xpath = "//select[@id='IDUser']")
+    public WebElement IDUser;
+
+    @FindBy(xpath = "//select[@id='IDHotelRoom']")
+    public WebElement IDHotelRoom;
+
+    @FindBy(xpath = "//input[@id='Price']")
+    public WebElement Price;
+
+    @FindBy(xpath = "(//input[@type='text'])[2]")
+    public WebElement DateStart;
+
+    @FindBy(xpath = "(//input[@type='text'])[3]")
+    public WebElement DateEnd;
+
+    @FindBy(xpath = "//input[@id='AdultAmount']")
+    public WebElement AdultAmount;
+
+    @FindBy(xpath = "(//input[@type='text'])[5]")
+    public WebElement ChildrenAmount;
+
+    @FindBy(xpath = "(//input[@type='text'])[6]")
+    public WebElement ContactNameSurname;
+
+    @FindBy(xpath = "//input[@id='ContactPhone']")
+    public WebElement ContactPhone;
+
+    @FindBy(xpath = "//input[@id='ContactEmail']")
+    public WebElement ContactEmail;
+
+    @FindBy(xpath = "//input[@id='Notes']")
+    public WebElement Notes;
+
+
+    public void koalaResortLogin() {
         Driver.getDriver().get(ConfigReader.getProperty("kr_url"));
         ilkLoginLink.click();
         kullaniciAdi.sendKeys(ConfigReader.getProperty("kr_valid_username"));
         passwordTextBox.sendKeys(ConfigReader.getProperty("kr_valid_password"));
         loginButonu.click();
     }
+
+}
