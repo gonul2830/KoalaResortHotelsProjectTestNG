@@ -1,4 +1,4 @@
-package tests.US_003;
+package tests.uS_003;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -8,8 +8,9 @@ import org.testng.annotations.Test;
 import pages.KoalaResortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class OtelOlusturmaPositiveTest {
+public class TC_001_OtelOlusturmaPositiveTest extends TestBaseRapor {
     KoalaResortPage koalaResortPage = new KoalaResortPage();
     /*
     koalaresorthotels sitesine girin
