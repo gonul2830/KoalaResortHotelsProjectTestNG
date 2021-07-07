@@ -1,49 +1,51 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.awt.*;
 import java.util.List;
 
 public class KoalaResortPage {
 
-    public KoalaResortPage(){
+    public KoalaResortPage() {
 
-            PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
 
     }
 
     @FindBy(linkText = "Log in")
     public WebElement ilkLoginLink;
 
-    @FindBy (id="UserName")
-    public  WebElement kullaniciAdi;
+    @FindBy(id = "UserName")
+    public WebElement kullaniciAdi;
 
-    @FindBy(id="Password")
+    @FindBy(id = "Password")
     public WebElement passwordTextBox;
 
-    @FindBy(id="btnSubmit")
+    @FindBy(id = "btnSubmit")
     public WebElement loginButonu;
 
     @FindBy(xpath = "//*[.='Try again please']")
     public WebElement girisYapilamadiElementi;
 
-    @FindBy (xpath = "//*[text()='Hotel Management']")
+    @FindBy(xpath = "//*[text()='Hotel Management']")
     public WebElement hotelManagement;
 
-    @FindBy (partialLinkText = "Hotel List")
+    @FindBy(partialLinkText = "Hotel List")
     public WebElement hotelList;
 
-    @FindBy (xpath = "//*[text()='Add Hotel ']")
+    @FindBy(xpath = "//*[text()='Add Hotel ']")
     public WebElement addHotel;
 
     @FindBy(xpath = "//input[@id='Code']")
     public WebElement codeTextBox;
 
-    @FindBy(xpath = "//input[@id='Name']")
+   @FindBy(xpath = "//input[@id='Name']")
     public WebElement nameTextBox;
 
     @FindBy(xpath = "//input[@id='Address']")
@@ -66,7 +68,7 @@ public class KoalaResortPage {
 
     @FindBy(xpath = "//*[text()='OK']")
     public WebElement sonOKButonu;
-//
+
     @FindBy(partialLinkText = "Hotel Rooms")
     public WebElement hotelRoomsBtn;
 
@@ -88,7 +90,7 @@ public class KoalaResortPage {
     @FindBy(xpath = "//input[@name='Phone']")
     public WebElement phoneTextTable;
 
-    @FindBy(xpath  ="//*[text()='Search']")
+    @FindBy(xpath = "//*[text()='Search']")
     public WebElement hotelListSearchBtn;
 
     @FindBy(xpath = "//tbody//tr//td[3]")
@@ -104,87 +106,59 @@ public class KoalaResortPage {
     public WebElement codeTextTable;
 
 
+    @FindBy(xpath = "//a[@href='/admin/RoomReservationAdmin']")
+    public WebElement roomReservations;
 
+    @FindBy(xpath = "//span[@class='hidden-480']")
+    public WebElement addRoomReservation;
 
+    @FindBy(xpath = "//select[@id='IDUser']")
+    public WebElement IDUser;
 
-    @FindBy (xpath = "//*[text()='Hotel Management']")
-    public WebElement hotelManagement;
+    @FindBy(xpath = "//select[@id='IDHotelRoom']")
+    public WebElement IDHotelRoom;
 
-    @FindBy (partialLinkText = "Hotel List")
-    public WebElement hotelList;
+    @FindBy(xpath = "//input[@id='Price']")
+    public WebElement Price;
 
-    @FindBy (xpath = "//*[text()='Add Hotel ']")
-    public WebElement addHotel;
+    @FindBy(xpath = "(//input[@type='text'])[2]")
+    public WebElement DateStart;
 
-    @FindBy(xpath = "//input[@id='Code']")
-    public WebElement codeTextBox;
+    @FindBy(xpath = "(//input[@type='text'])[3]")
+    public WebElement DateEnd;
 
-    @FindBy(xpath = "//input[@id='Name']")
-    public WebElement nameTextBox;
+    @FindBy(xpath = "//input[@id='AdultAmount']")
+    public WebElement AdultAmount;
 
-    @FindBy(xpath = "//input[@id='Address']")
-    public WebElement adressTextBox;
+    @FindBy(xpath = "(//input[@type='text'])[5]")
+    public WebElement ChildrenAmount;
 
-    @FindBy(xpath = "//input[@id='Phone']")
-    public WebElement phoneTextBox;
+    @FindBy(xpath = "(//input[@type='text'])[6]")
+    public WebElement ContactNameSurname;
 
-    @FindBy(xpath = "//input[@id='Email']")
-    public WebElement emailTextBox;
+    @FindBy(xpath = "//input[@id='ContactPhone']")
+    public WebElement ContactPhone;
 
-    @FindBy(id = "IDGroup")
-    public WebElement acilirMenu;
+    @FindBy(xpath = "//input[@id='ContactEmail']")
+    public WebElement ContactEmail;
 
-    @FindBy(id = "btnSubmit")
-    public WebElement saveButonu;
-
-    @FindBy(xpath = "//div[text()='Hotel was inserted successfully']")
-    public WebElement sonucYazisiElementi;
-
-    @FindBy(xpath = "//*[text()='OK']")
-    public WebElement sonOKButonu;
-//
-    @FindBy(partialLinkText = "Hotel Rooms")
-    public WebElement hotelRoomsBtn;
-
-    @FindBy(xpath = "//*[text()='Add Hotelroom ']")
-    public WebElement addHotelsRoom;
-
-    @FindBy(id = "IDHotel")
-    public WebElement idHotelDropDown;
-
-    @FindBy(xpath = "//textarea[@title='Zengin Metin Editörü, Description']")
-    public WebElement descriptionsTextBox;
-
-    @FindBy(id = "IDGroupRoomType")
-    public WebElement roomTypeDropdown;
-
-    @FindBy(id = "MaxAdultCount")
-    public WebElement maxAdult;
-
-    @FindBy(xpath = "//input[@name='Phone']")
-    public WebElement phoneTextTable;
-
-    @FindBy(xpath  ="//*[text()='Search']")
-    public WebElement hotelListSearchBtn;
-
-    @FindBy(xpath = "//tbody//tr//td[3]")
-    public WebElement nameHotelKontrol;
-
-    @FindBy(xpath = "//input[@name='Email']")
-    public WebElement emailTextTable;
-
-    @FindBy(xpath = "//input[@name='Name']")
-    public WebElement nameTextTable;
-
-    @FindBy(xpath = "//input[@name='Code']")
-    public WebElement codeTextTable;
-
-    @FindBy(xpath = "//*[text()='Room reservations']")
-    public WebElement roomReservation;
-
-
-
-
+    @FindBy(xpath = "//input[@id='Notes']")
+    public WebElement Notes;
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
