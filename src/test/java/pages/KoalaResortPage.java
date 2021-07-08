@@ -32,7 +32,7 @@ public class KoalaResortPage {
     public WebElement girisYapilamadiElementi;
 
 
-    @FindBy (xpath = "//*[text()='Hotel Management']")
+    @FindBy (id="menuHotels")
     public WebElement hotelManagement;
 
     @FindBy (partialLinkText = "Hotel List")
@@ -67,5 +67,35 @@ public class KoalaResortPage {
 
     @FindBy(xpath = "//*[text()='OK']")
     public WebElement sonOKButonu;
+
+    @FindBy(xpath = "(//i[@class='icon-calendar'])[4]")
+    public WebElement roomReservationUpdate;
+
+    @FindBy(xpath = "(//*[text()=' Details'])[10]")
+    public WebElement ahmetRoomReservationDetails;
+
+    @FindBy(className = "sorting_1")
+    public WebElement ahmetReservationHotelRoom;
+
+    @FindBy(id = "DateEnd")
+    public WebElement reservationUpdateDateEnd;
+
+    @FindBy(xpath = "(//*[@class='day'])[10]")
+    public WebElement reservationUpdateDay;
+
+    @FindBy(xpath = "(//*[text()='Save'])[1]")
+    public WebElement reservationUpdateSave;
+
+    @FindBy(id = "btnDelete")
+    public WebElement reservationUpdateDelete;
+
+    @FindBy(id = "IDHotelRoom")
+    public WebElement reservationRoomChangeHotelRoom;
+
+    @FindBy(id = "ContactPhone")
+    public WebElement reservationRoomContactPhone;
+
+
+
 
 }
