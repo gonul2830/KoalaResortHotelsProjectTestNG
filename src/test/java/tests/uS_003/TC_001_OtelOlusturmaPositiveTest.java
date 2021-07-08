@@ -67,6 +67,7 @@ public class TC_001_OtelOlusturmaPositiveTest extends TestBaseRapor {
         koalaResortPage.sonOKButonu.click();
 
         Driver.closeDriver();
+        //test pass
 
 
     }
