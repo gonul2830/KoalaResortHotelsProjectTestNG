@@ -68,7 +68,7 @@ public class TC_001_OtelOlusturmaPositiveTest extends TestBaseRapor {
 
         Driver.closeDriver();
         //test pass
-
+         //deneme
 
     }
 
