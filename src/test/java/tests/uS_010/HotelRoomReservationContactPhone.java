@@ -45,7 +45,7 @@ public class HotelRoomReservationContactPhone {
         koalaResortPage.roomReservationUpdate.click();
 
         //WebElement hotelRoom = Driver.getDriver().findElement((By) koalaResortPage.ahmetReservationHotelRoom);
-       // WebElement number = Driver.getDriver().findElement(By.xpath("//td[text()='(999) 999-9999'])"));
+        //WebElement number = Driver.getDriver().findElement(By.xpath("//td[text()='(999) 999-9999'])"));
 
         //Assert.assertEquals(number,(ConfigReader.getProperty("kr_contact_phone-update")));
 
